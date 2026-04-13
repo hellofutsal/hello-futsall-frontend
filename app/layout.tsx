@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "HelloFutsall - Automate Your Futsal Court Management",
     description:
       "Digital court management system for futsal businesses. Auto client registration, smart booking, and admin dashboard.",
-    images: ["/logo/2.jpg"],
+    images: ["/logo/2.png"],
   },
   verification: {
     google: "google91119f0c6160eaf9",
