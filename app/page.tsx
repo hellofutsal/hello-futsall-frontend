@@ -184,7 +184,7 @@ export default function Home() {
                 >
                   Contact
                 </a>
-                <button
+                {/* <button
                   onClick={() => setIsDarkMode(!isDarkMode)}
                   className={`p-2 rounded-lg ${
                     isDarkMode ? "bg-gray-800" : "bg-gray-100"
@@ -193,7 +193,7 @@ export default function Home() {
                   aria-label="Toggle theme"
                 >
                   {isDarkMode ? "☀️" : "🌙"}
-                </button>
+                </button> */}
               </div>
               <div>
                 <a
