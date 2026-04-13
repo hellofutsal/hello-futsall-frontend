@@ -16,13 +16,13 @@ export default function Home() {
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
     setIsDarkMode(prefersDark);
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -32,7 +32,7 @@ export default function Home() {
     const subject = `Demo Request from ${formData.name} <${formData.email}>`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nReply-To: ${formData.email}\nMessage: ${formData.message}`;
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 5000);
@@ -112,7 +112,12 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-3">
-                <div className="w-[200px] aspect-square  flex items-center relative mt-5">
+                <button
+                  type="button"
+                  onClick={() => window.location.reload()}
+                  className="w-[200px] aspect-square flex items-center relative mt-5 cursor-pointer"
+                  aria-label="Refresh the page"
+                >
                   <Image
                     src="/logo/2.png"
                     alt="Hello Futsall logo"
@@ -121,7 +126,7 @@ export default function Home() {
                     sizes="auto"
                     style={{ objectFit: "contain" }}
                   />
-                </div>
+                </button>
               </div>
               <div className="hidden md:flex space-x-8 items-center">
                 <a
