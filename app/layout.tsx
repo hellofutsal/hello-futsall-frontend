@@ -53,12 +53,16 @@ export const metadata: Metadata = {
     ],
     other: [
       {
-        rel: "android-chrome-192x192",
+        rel: "icon",
         url: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
       },
       {
-        rel: "android-chrome-512x512",
+        rel: "icon",
         url: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
   },
@@ -106,27 +110,6 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        {/* Add favicon links here - this will override metadata */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
