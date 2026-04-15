@@ -16,13 +16,13 @@ export default function Home() {
 
   useEffect(() => {
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
     setIsDarkMode(prefersDark);
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -32,7 +32,7 @@ export default function Home() {
     const subject = `Demo Request from ${formData.name} <${formData.email}>`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nReply-To: ${formData.email}\nMessage: ${formData.message}`;
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 5000);
@@ -54,7 +54,7 @@ export default function Home() {
     name: "HelloFutsal",
     description: "Futsal court management and booking system",
     url: "https://www.hellofutsall.com",
-    logo: "https://www.hellofutsall.com/logo.png",
+    logo: "https://www.hellofutsall.com/logo/2.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+977-9749865300",
