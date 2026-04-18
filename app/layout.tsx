@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hellofutsall.com"),
   title: {
-    default: "HelloFutsall - Automate Your Futsal Court Management",
-    template: "%s | HelloFutsall",
+    default: "Hello Futsal – Smart Futsal Management System",
+    template: "%s | Hello Futsal",
   },
   description:
-    "Replace messy paper registers with HelloFutsall's digital court management system. Manage client registrations, court bookings, and payments from one dashboard.",
+    "Hello Futsal helps you manage bookings, track payments, and organize schedules. Replace manual work with a smart digital system.",
   keywords: [
     "futsal management",
     "court booking system",
